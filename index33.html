@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Animantion | Coding™</title>
+
+</head>
+<body>
+    <div class="box">
+        <div class="innerBox">
+            <button class="btn"><i class="fi-rr-plus-small"></i></button>
+            <div class="inputBox">
+                <input type="text" placeholder="Message">
+            </div>
+            <div class="icon_links">
+                <ul>
+                    <li><i class="fi-rr-video-camera"></i></li>
+                    <li><i class="fi-rr-camera"></i></li>
+                    <li><i class="fi-rr-picture"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector(".box");
+        const btn = document.querySelector(".btn"); 
+        togglebtn = () => {
+            if(box.classList.contains("showMsg")){
+                box.classList.remove("showMsg");
+                box.classList.add("showLinks");
+            }else{
+                box.classList.remove("showLinks");
+                box.classList.add("showMsg");
+            }
+        };
+        btn.addEventListener("click",togglebtn);
+
+    </script>
+</body>
+</html>
